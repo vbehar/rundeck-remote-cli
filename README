@@ -1,0 +1,27 @@
+
+RunDeck Remote CLI
+Uses the RunDeck REST API - See http://vbehar.github.com/rundeck-api-java-client/
+
+Documentation : https://github.com/vbehar/rundeck-remote-cli/
+RunDeck Home : http://rundeck.org/
+
+LICENSE : The Apache Software License, Version 2.0
+See the LICENSE file, or http://www.apache.org/licenses/LICENSE-2.0
+
+How to build :
+- prerequisites : Apache Maven 2.2.1 or 3.x http://maven.apache.org/
+- run "mvn package"
+- the jar file (with all dependencies included) is located in target/rundeck-remote-cli-VERSION-jar-with-dependencies.jar 
+
+Or download a recent version from https://github.com/vbehar/rundeck-remote-cli/downloads
+
+How to use :
+- execute "java -jar rundeck-remote-cli-VERSION-jar-with-dependencies.jar" to display the usage (help)
+- You can provide your RunDeck credentials either with environment variables (RUNDECK_URL, RUNDECK_LOGIN and RUNDECK_PASSWORD), or with CLI parameters (--url, --login and --password), or with a mix of both, for example : url and login from environment, and password from cli.
+
+Example :
+$ export RUNDECK_URL="http://localhost:4440"
+$ export RUNDECK_LOGIN="admin"
+$ java -jar rundeck-remote-cli-VERSION-jar-with-dependencies.jar --password status
+--> the program will ask for your RunDeck password, and show you the status of your RunDeck instance.
+
