@@ -20,6 +20,7 @@ import org.rundeck.api.RundeckClient;
 import org.rundeck.cli.command.Command;
 import org.rundeck.cli.command.ListCommand;
 import org.rundeck.cli.command.StatusCommand;
+import org.rundeck.cli.command.ExecuteCommand;
 import com.beust.jcommander.JCommander;
 
 /**
@@ -90,6 +91,6 @@ public class RundeckCli {
      * @param args CLI arguments
      */
     public static void main(String[] args) {
-        new RundeckCli(args, new StatusCommand(), new ListCommand()).run();
+        new RundeckCli(args, new StatusCommand(), new ListCommand(), new ExecuteCommand()).run();
     }
 }
